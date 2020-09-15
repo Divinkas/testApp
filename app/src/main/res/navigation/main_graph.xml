@@ -19,6 +19,9 @@
         <action
             android:id="@+id/toContactFromModule"
             app:destination="@id/contactFromModule" />
+        <action
+            android:id="@+id/toMyContactScreen"
+            app:destination="@id/myContactScreen" />
     </fragment>
 
     <fragment
@@ -38,5 +41,11 @@
         android:name="com.divinkas.app.testuimodule.fragment.contact.ContactScreen"
         android:label="Contact from module"
         tools:layout="@layout/contact_screen" />
+
+    <fragment
+        android:id="@+id/myContactScreen"
+        android:name="com.divinkas.app.newandroidproject.ui.contact.MyContactScreen"
+        android:label="My contact screen"
+        tools:layout="@layout/my_contact_screen" />
 
 </navigation>

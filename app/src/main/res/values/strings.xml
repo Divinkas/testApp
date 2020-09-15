@@ -3,4 +3,5 @@
     <string name="default_contact_screen">Default contact screen</string>
     <string name="overrided_contact_screen">Overrided contact screen</string>
     <string name="go_to_contact_screen_from_module">Go to Contact screen from module</string>
+    <string name="go_to_my_contact_screen">Go to my contact screen</string>
 </resources>

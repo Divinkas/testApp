@@ -18,5 +18,9 @@ class MainScreen : BaseScreen(R.layout.main_screen) {
         btnGoToContactScreen.setOnClickListener {
             findNavController().navigate(MainScreenDirections.toContactFromModule())
         }
+
+        btnGoToMyContactScreen.setOnClickListener {
+            findNavController().navigate(MainScreenDirections.toMyContactScreen())
+        }
     }
 }
