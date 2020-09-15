@@ -16,6 +16,9 @@
         <action
             android:id="@+id/toOverridedContactScreen"
             app:destination="@id/overridedContactScreen" />
+        <action
+            android:id="@+id/toContactFromModule"
+            app:destination="@id/contactFromModule" />
     </fragment>
 
     <fragment
@@ -28,6 +31,12 @@
         android:id="@+id/overridedContactScreen"
         android:name="com.divinkas.app.newandroidproject.ui.contact.NovaContactScreenOverrided"
         android:label="@string/overrided_contact_screen"
+        tools:layout="@layout/contact_screen" />
+
+    <fragment
+        android:id="@+id/contactFromModule"
+        android:name="com.divinkas.app.testuimodule.fragment.contact.ContactScreen"
+        android:label="Contact from module"
         tools:layout="@layout/contact_screen" />
 
 </navigation>

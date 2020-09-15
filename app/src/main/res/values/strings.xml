@@ -2,4 +2,5 @@
     <string name="app_name">NewAndroidProject</string>
     <string name="default_contact_screen">Default contact screen</string>
     <string name="overrided_contact_screen">Overrided contact screen</string>
+    <string name="go_to_contact_screen_from_module">Go to Contact screen from module</string>
 </resources>
