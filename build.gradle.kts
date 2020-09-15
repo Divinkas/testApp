@@ -1,4 +1,7 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 buildscript {
+    val kotlin_version by extra("1.3.72")
     repositories {
         google()
         jcenter()
@@ -8,7 +11,7 @@ buildscript {
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.60")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.2.0-rc03")
         classpath("org.jmailen.gradle:kotlinter-gradle:2.1.2")
     }
 }
@@ -19,7 +22,7 @@ allprojects {
         jcenter()
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions {
             jvmTarget = "1.8"
             freeCompilerArgs = listOf("-XXLanguage:+InlineClasses")

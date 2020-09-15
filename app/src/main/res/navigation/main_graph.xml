@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.divinkas.app.newandroidproject.ui.main.MainScreen"
+        android:label="Main Screen"
+        tools:layout="@layout/main_screen">
+        <action
+            android:id="@+id/toDefaultContactScreen"
+            app:destination="@id/defaultContactScreen" />
+        <action
+            android:id="@+id/toOverridedContactScreen"
+            app:destination="@id/overridedContactScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/defaultContactScreen"
+        android:name="com.divinkas.app.newandroidproject.ui.contact.NovaContactScreen"
+        android:label="@string/default_contact_screen"
+        tools:layout="@layout/contact_screen" />
+
+    <fragment
+        android:id="@+id/overridedContactScreen"
+        android:name="com.divinkas.app.newandroidproject.ui.contact.NovaContactScreenOverrided"
+        android:label="@string/overrided_contact_screen"
+        tools:layout="@layout/contact_screen" />
+
+</navigation>

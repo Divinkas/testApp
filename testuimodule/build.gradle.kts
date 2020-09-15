@@ -1,23 +1,18 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("android.extensions")
-    kotlin("kapt")
-    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
-    compileSdkVersion(Configuration.compileSdkVersion)
-    buildToolsVersion(Configuration.buildToolsVersion)
+    compileSdkVersion(29)
+    buildToolsVersion("29.0.3")
 
     defaultConfig {
         minSdkVersion(Configuration.minSdkVersion)
         targetSdkVersion(Configuration.targetSdkVersion)
-
-        applicationId = "com.divinkas.app.newandroidproject"
-        versionCode = 21
-        versionName = "1.0.0-RC01"
-        multiDexEnabled = true
+        versionCode = 1
+        versionName = "1.0.0"
     }
 
     dataBinding.isEnabled = true
@@ -39,7 +34,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":testuimodule"))
     implementation(Dependencies.kotlinStandardLibrary)
 
     implementation(Dependencies.AndroidX.appCompat)
@@ -52,23 +46,13 @@ dependencies {
     implementation(Dependencies.AndroidX.viewModel)
     implementation(Dependencies.AndroidX.encryptedSharedPreferences)
 
-    implementation(Dependencies.Misc.timber)
-    implementation(Dependencies.View.stepProgressBar)
-    implementation(Dependencies.View.lottie)
-
     implementation(Dependencies.Koin.core)
     implementation(Dependencies.Koin.coreExt)
     implementation(Dependencies.Koin.scope)
     implementation(Dependencies.Koin.viewModel)
     implementation(Dependencies.Koin.ext)
 
-    implementation(Dependencies.Retrofit.okHttp)
-    implementation(Dependencies.Retrofit.retrofit)
-    implementation(Dependencies.Retrofit.gsonConverter)
-    implementation(Dependencies.Retrofit.loggingInterceptor)
-
-    implementation(Dependencies.Others.glide)
-    implementation(Dependencies.Others.circleimageview)
+    implementation(Dependencies.Misc.timber)
 
     testImplementation(Dependencies.jUnit)
     testImplementation(Dependencies.Koin.test)

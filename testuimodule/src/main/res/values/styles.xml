@@ -7,8 +7,4 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="CustomContactText">
-        <item name="android:textColor">@color/redColor</item>
-        <item name="android:textSize">24sp</item>
-    </style>
 </resources>
